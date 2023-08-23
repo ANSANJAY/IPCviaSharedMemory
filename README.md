@@ -288,9 +288,7 @@ END
 ```vbnet
 PROGRAM file_write
 
-STRUCTURE student_t:
-    INTEGER roll_no
-    INTEGER marks
+STRUCTURE friend_t:
     STRING name[128]
     STRING city[128]
 
@@ -323,13 +321,11 @@ START
 
     CLOSE file descriptor fd
 
-    INITIALIZE student_t structure with data:
-        roll_no = 123
-        marks = 90
-        name = "Abhishek"
-        city = "Bangalore"
+    INITIALIZE friend_t structure with data:
+        name = "Ana"
+        city = "Dallas"
 
-    COPY student_t data to mapped area
+    COPY friend_t data to mapped area
 
     SYNCHRONIZE data using msync
 
